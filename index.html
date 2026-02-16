@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanctuary Suite</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Config -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3A3A38", // Deep Charcoal
+              "ink-primary": "#3A3A38",
+              "ink-secondary": "#4A4A46",
+              "ink-muted": "#9C9991",
+              "paper-main": "#F5F2EA", // Warm Parchment
+              "paper-surface": "#FDFBF7",
+              "paper-darker": "#EBE6DA",
+              "accent-liturgical": "#8C3B3B", // Crimson
+              "border-subtle": "#D8D3C8",
+            },
+            fontFamily: {
+              "display": ["Crimson Text", "serif"],
+              "serif": ["EB Garamond", "serif"],
+              "sans": ["Jost", "sans-serif"],
+              "mono": ["Space Mono", "monospace"],
+            },
+            borderRadius: {
+              "DEFAULT": "2px",
+              "paper": "2px",
+              "sm": "2px",
+              "md": "4px",
+              "lg": "6px",
+            },
+            boxShadow: {
+              'paper': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+          width: 6px;
+          height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+          background: #F5F2EA;
+      }
+      ::-webkit-scrollbar-thumb {
+          background: #D8D3C8;
+          border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+          background: #9C9991;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      .hatch-pattern {
+        background-image: repeating-linear-gradient(
+            45deg,
+            rgba(140, 59, 59, 0.05),
+            rgba(140, 59, 59, 0.05) 5px,
+            rgba(140, 59, 59, 0.15) 5px,
+            rgba(140, 59, 59, 0.15) 6px
+        );
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-paper-main text-ink-primary font-serif antialiased selection:bg-accent-liturgical selection:text-white h-screen overflow-hidden">
+    <div id="root" class="h-full"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

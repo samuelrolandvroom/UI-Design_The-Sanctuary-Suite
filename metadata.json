@@ -1,0 +1,7 @@
+{
+  "name": "Sanctuary Suite",
+  "description": "A digital sanctuary for church life, unifying sermon study, ministry scheduling, and choir rehearsal into a single, distraction-free interface with a luminous paper aesthetic.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
